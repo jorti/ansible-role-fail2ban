@@ -1,0 +1,10 @@
+[DEFAULT]
+backend = {{ fail2ban_backend }}
+banaction = {{ fail2ban_banaction }}
+bantime = {{ fail2ban_bantime }}
+
+{% for item in fail2ban_jails %}
+[{{ item }}]
+enabled = true
+
+{% endfor %}

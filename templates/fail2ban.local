@@ -1,0 +1,3 @@
+[Definition]
+loglevel = {{ fail2ban_loglevel }}
+logtarget = {{ fail2ban_logtarget }}

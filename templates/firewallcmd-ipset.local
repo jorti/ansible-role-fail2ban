@@ -1,0 +1,2 @@
+[Init]
+bantime = {{ fail2ban_bantime }}
