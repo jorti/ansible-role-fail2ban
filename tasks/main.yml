@@ -6,8 +6,8 @@
   template: src={{ item.src }} dest={{ item.dest }}
             backup=yes mode=0644 owner=root group=root
   with_items:
-    - { src: 'fail2ban.local', dest: '{{ fail2ban_configdir }}/fail2ban.local' }
-    - { src: 'jail.local', dest: '{{ fail2ban_configdir }}/jail.local' }
-    - { src: 'firewallcmd-ipset.local', dest: '{{ fail2ban_configdir }}/action.d/firewallcmd-ipset.local' }
+    - { src: 'fail2ban.local.j2', dest: '{{ fail2ban_configdir }}/fail2ban.local' }
+    - { src: 'jail.local.j2', dest: '{{ fail2ban_configdir }}/jail.local' }
+    - { src: 'firewallcmd-ipset.local.j2', dest: '{{ fail2ban_configdir }}/action.d/firewallcmd-ipset.local' }
   notify:
     - restart fail2ban
