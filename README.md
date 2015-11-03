@@ -30,4 +30,4 @@ GPLv3
 Author Information
 ------------------
 
-https://miceliux.com/apuntesderoot/about/
+https://apuntesderootblog.wordpress.com/
