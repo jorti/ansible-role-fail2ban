@@ -2,6 +2,7 @@
 backend = {{ fail2ban_backend }}
 banaction = {{ fail2ban_banaction }}
 bantime = {{ fail2ban_bantime }}
+ignoreip = {{ fail2ban_ignoreip }}
 
 {% for item in fail2ban_jails %}
 [{{ item }}]
