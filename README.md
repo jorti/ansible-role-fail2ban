@@ -14,6 +14,9 @@ Role Variables
   * fail2ban_banaction: firewallcmd-ipset
   * fail2ban_bantime: 3600
   * fail2ban_jails: [sshd, postfix]
+  * fail2ban_ignoreip: space separated list of IP#s to ignore / whitelist
+  * fail2ban_findtime: (use system default unless set)
+  * fail2ban_maxretry: (use system default unless set)
 
 Example Playbook
 ----------------

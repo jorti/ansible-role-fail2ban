@@ -2,9 +2,16 @@
 backend = {{ fail2ban_backend }}
 banaction = {{ fail2ban_banaction }}
 bantime = {{ fail2ban_bantime }}
-
+{% if fail2ban_ignoreip is defined %}
+ignoreip = {{ fail2ban_ignoreip }}
+{% endif %}
+{% if fail2ban_findtime is defined %}
+findtime = {{ fail2ban_findtime }}
+{% endif %}
+{% if fail2ban_maxretry is defined %}
+maxretry = {{ fail2ban_maxretry }}
+{% endif %}
 {% for item in fail2ban_jails %}
 [{{ item }}]
 enabled = true
-
 {% endfor %}

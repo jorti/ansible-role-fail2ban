@@ -11,3 +11,10 @@
     - { src: 'firewallcmd-ipset.local.j2', dest: '{{ fail2ban_configdir }}/action.d/firewallcmd-ipset.local' }
   notify:
     - restart fail2ban
+
+# Installation oddness, maybe when not using defaults
+- name: make sure /var/run/fail2ban is there
+  file:
+    path: /var/run/fail2ban
+    state: directory
+    mode: 0755
